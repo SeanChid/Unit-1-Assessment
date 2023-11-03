@@ -18,27 +18,56 @@ function greaterThanTen(numbers) {
 //   bWords(['banana', 'orange', 'apple', 'Bonobo', 'kiwi', 'pear']);
 //   => ['banana', 'Bonobo]
 function bWords(words) {
-  for (word of words)
+  let newWords = []
+  for (let word of words) {
+    let i = word.split('')
+    if (i[0] === 'b') {
+      newWords.push(word)
+    }
+    if (i[0] === 'B') {
+      newWords.push(word)
+    }
+  }
+  return newWords
 }
-
 // Add all the elements from additionalItems to the end of originalArray.
 // Return the originalArray..
 // Ex.:
 //  extend([1, 2, 3], [4, 5, 6]);
 //  => [1, 2, 3, 4, 5, 6]
-function extend(originalArray, additionalItems) {}
+function extend(originalArray, additionalItems) {
+  for (let item of additionalItems) {
+    originalArray.push(item)
+  }
+  return originalArray
+}
 
 // Return an array of all items with the given length.
 // Ex.:
 //   itemsWithLength(['a', 'bbb', 'cccc', 'dddddd', 'eee'], 3);
 //   => ['bbb', 'eee']
-function itemsWithLength(items, length) {}
+function itemsWithLength(items, length) {
+  const newArray = []
+  for (let item of items) {
+    let i = item.split('')
+    if (length === i.length) {
+      newArray.push(item)
+    }
+  }
+  return newArray
+}
 
 // Return an array with every other element from the input array (start with index 0).
 // Ex.:
 //   everyOtherItem(['a', 'b', 'c', 'd', 'e']);
 //   => ['a', 'c', 'e']
-function everyOtherItem(items) {}
+function everyOtherItem(items) {
+  let newItems = []
+  for (let i = 0; i <= items.length-1; i += 2) {
+    newItems.push(items[i])
+  }
+  return newItems
+}
 
 // Given a list of words and a letter, return the indexes of the words that
 // start with that letter. You can assume that the words and letter will always
