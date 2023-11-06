@@ -50,17 +50,26 @@ function generateSentence(person, beverage, location) {
 //   censorVowels('javascript');
 //   => 'j*v*scr*pt'
 function censorVowels(string) {
-  let letter = string.split('')
-  for (let i of letter) {
-    
+  const vowels = ['a','e','i','o','u']
+  let letters = string.split('')
+  let vowel = vowels.split(',')
+  for (let i of letters) {
+    if (i === vowel) {
+      string.splice(string[i],1,'*')
+    }
   }
+  return string
 }
 
 // Return the given string in sticky case.
 // Ex.:
 //   stickyCase('hello world');
 //   => 'hElLo wOrLd'
-function stickyCase(string) {}
+function stickyCase(string) {
+  for (let i of string) {
+
+  }
+}
 
 // Return the given string in leetspeak. Leetspeak is a modified version of
 // English where characters are replaced by numbers or symbols. For this

@@ -94,14 +94,11 @@ function findWordsStartingWith(words, letter) {
 //   => [21, 4, 1]
 function smallestNItems(items, n) {
   const newItems = []
-  n = newItems.length
-  for (i = 0; i <= items.length-1; i++) {
-    if (items[i] >= items[n]) {
+  items.sort(function(a,b){return a-b})
+    for (i = 0; i <= n-1; i++) {
       newItems.push(items[i])
     }
-  }
-  newItems.reverse()
-  return newItems
+    return newItems.reverse()
 }
 
 // Search for a value in the array and return its index. If the value appears
@@ -125,13 +122,9 @@ function findIndex(items, value) {
 //   => [1, 2, 3, 4, 5]
 function range(start, stop) {
   const array = []
-  start = array[0]
-  stop = array[array.length-1]
-  for (let i = 0; i <= array.length-1; i++) {
-    array.splice(i,0,array[i])
-    if (array[i] === stop) {
-      break
-    }
+
+  for (let i = start; i <= stop; i++) {
+    array.push(i)
   }
   return array
 }
