@@ -241,25 +241,25 @@ Write a short description of the following data types:
 **_String_**
 
 ```
-REPLACE THIS WITH YOUR ANSWER
+Strings are datatypes that take the form of words or letters; they are distinguished by quotation marks or by other means. 
 ```
 
 **_Number_**
 
 ```
-REPLACE THIS WITH YOUR ANSWER
+Numbers are numerical values that can be used for mathematical calculations.
 ```
 
 **_Boolean_**
 
 ```
-REPLACE THIS WITH YOUR ANSWER
+Boolean refers to a value that can return true or false, like a light switch state.
 ```
 
 **_Array_**
 
 ```
-REPLACE THIS WITH YOUR ANSWER
+Arrays are lists that can contain multiple values like strings, numbers, and even other arrays.
 ```
 
 ### B.3. Trace the value of `x`

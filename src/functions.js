@@ -52,9 +52,8 @@ function generateSentence(person, beverage, location) {
 function censorVowels(string) {
   const vowels = ['a','e','i','o','u']
   let letters = string.split('')
-  let vowel = vowels.split(',')
   for (let i of letters) {
-    if (i === vowel) {
+    if (i === vowels) {
       string.splice(string[i],1,'*')
     }
   }

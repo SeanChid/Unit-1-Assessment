@@ -94,8 +94,8 @@ function findWordsStartingWith(words, letter) {
 //   => [21, 4, 1]
 function smallestNItems(items, n) {
   const newItems = []
-  items.sort(function(a,b){return a-b})
-    for (i = 0; i <= n-1; i++) {
+  items.sort((a,b) => {a-b})
+    for (i = 0; i < n; i++) {
       newItems.push(items[i])
     }
     return newItems.reverse()
